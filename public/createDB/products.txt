@@ -1,0 +1,17 @@
+CREATE TABLE `products` (
+	`productId` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`displayName` VARCHAR(50) NOT NULL COLLATE 'utf8mb3_unicode_ci',
+	`code` VARCHAR(50) NOT NULL COLLATE 'utf8mb3_unicode_ci',
+	`qty` INT(10) NOT NULL DEFAULT '0',
+	`price` DECIMAL(20,2) NOT NULL DEFAULT '0.00',
+	`imgPath` VARCHAR(50) NULL DEFAULT '0' COLLATE 'utf8mb3_unicode_ci',
+	`detail` VARCHAR(255) NULL DEFAULT '' COLLATE 'utf8mb3_unicode_ci',
+	`isActive` ENUM('Y','N') NOT NULL DEFAULT 'Y' COLLATE 'utf8mb3_unicode_ci',
+	`updatedDate` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+	`createdDate` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY KEY (`productId`) USING BTREE
+)
+COLLATE='utf8mb3_unicode_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=3
+;

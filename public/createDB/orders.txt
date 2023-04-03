@@ -1,0 +1,15 @@
+CREATE TABLE `orders` (
+	`ordersId` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`userId` INT(10) NOT NULL,
+	`isAddress` ENUM('Y','N') NOT NULL COLLATE 'utf8mb3_unicode_ci',
+	`deliveryInformationId` INT(10) NULL DEFAULT NULL,
+	`detail` VARCHAR(50) NULL DEFAULT '' COLLATE 'utf8mb3_unicode_ci',
+	`status` ENUM('done','wait','cancel') NOT NULL DEFAULT 'wait' COLLATE 'utf8mb3_unicode_ci',
+	`updatedDate` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+	`createdDate` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY KEY (`ordersId`) USING BTREE
+)
+COLLATE='utf8mb3_unicode_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=5
+;

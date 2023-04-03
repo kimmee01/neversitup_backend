@@ -1,0 +1,1 @@
+const e={title:"Default",cols:{displayName:{text:"displayName",sortBy:"kim"},code:{text:"code"},qty:{text:"qty"},price:{text:"price"},isActive:{text:"active"},actions:{text:"action",className:"w-20"}},rows:[],rowActions:t=>[{id:"delete",type:"delete",disable:!1}]},a=[];export{e as d,a as f};

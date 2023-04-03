@@ -1,0 +1,16 @@
+CREATE TABLE `deliveryinformation` (
+	`deliveryInformationId` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`userId` INT(10) NULL DEFAULT NULL,
+	`address` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb3_unicode_ci',
+	`moo` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb3_unicode_ci',
+	`district` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb3_unicode_ci',
+	`subdistrict` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb3_unicode_ci',
+	`province` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb3_unicode_ci',
+	`zipcode` INT(10) NULL DEFAULT NULL,
+	`updatedDate` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+	`createdDate` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY KEY (`deliveryInformationId`) USING BTREE
+)
+COLLATE='utf8mb3_unicode_ci'
+ENGINE=InnoDB
+;
