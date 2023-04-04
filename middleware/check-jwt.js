@@ -1,7 +1,6 @@
 import jwt from 'jsonwebtoken'
-export default function (option = {checkMFA: 1}) {
+export default function (option = { checkMFA: 1 }) {
   return function (req, res, next) {
-    // console.log(option)
     try {
       let token = null
       if (req.headers.authorization) {

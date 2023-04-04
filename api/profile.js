@@ -33,3 +33,14 @@ router.post('/updateProfile', checkJwt(), async(req, res) => {
     res.send({ ok: 0, error: err.message })
   }
 })
+
+router.post('/uploadImg', checkJwt(), async(req, res) => {
+  try {
+    const data = await ProfileCtrl.uploadImg(req, req.files)
+    res.send({
+      ok: 1,
+    })
+  } catch (err) {
+    res.send({ ok: 0, error: err.message })
+  }
+})

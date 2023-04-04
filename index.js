@@ -7,13 +7,16 @@ import cors from 'cors'
 // config server
 import config from './config.js'
 import DB from './lib/db.js'
+import fileUpload from 'express-fileupload'
 
 const app = express()
 const port = 3000
 
 const db = new DB(config.db)
 
+app.use(fileUpload({ createParentPath: true }))
 app.use(express.static('public'))
+app.use(express.static('public/images'))
 app.use(cors())
 
 // config req to send to any ctrl to use it
